@@ -1,0 +1,37 @@
+﻿@model HomeViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<html>
+
+<body>
+    <div class="container">
+
+        <div class="row">
+            @using (Html.BeginForm("CheckTimes", "Home", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+                @Html.EditorFor(m => m.FlightDate);
+
+                <div class="form-group">
+                    <button class="btn btn-primary" type="submit">Search</button>
+                </div>
+            }
+        </div>
+        <div class="row">&nbsp;</div>
+        <div class="row">
+            <div class="col-4">
+                <h1><span id="messageInput" class="label label-default"></span></h1>
+            </div>
+        </div>
+        <div class="row">&nbsp;</div>
+        <div class="row">
+            <div class="col-12">
+                <hr />
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

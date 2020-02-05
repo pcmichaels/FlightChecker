@@ -1,0 +1,47 @@
+﻿@model CheckTimesViewModel
+
+@{
+    ViewData["Title"] = "CheckTimes";
+}
+
+<h1>CheckTimes</h1>
+
+<div class="row">
+    <div class="col-12">
+        <table class="table table-sm table-striped table-hover border-bottom">
+            <thead>
+                <tr>
+                    <th>Departure</th>
+                    <th>Arrival</th>
+                    <th>Flight Number</th>
+                    <th>Capacity</th>
+                    <th>Duration</th>
+                </tr>
+
+            </thead>
+            <tbody>
+                @foreach (var flightTime in Model.FlightTimes)
+                {
+                    <tr>
+                        <td>
+                            @flightTime.DepartureDateTime
+                        </td>
+                        <td>
+                            @flightTime.ArrivalDateTime
+                        </td>
+                        <td>
+                            @flightTime.FlightNumber
+                        </td>
+                        <td>
+                            @flightTime.CapacitySeats
+                        </td>
+                        <td>
+                            @flightTime.FlightDuration
+                        </td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

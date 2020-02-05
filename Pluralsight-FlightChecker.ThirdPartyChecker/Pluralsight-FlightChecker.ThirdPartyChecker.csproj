@@ -5,5 +5,9 @@
     <RootNamespace>Pluralsight_FlightChecker.ThirdPartyChecker</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Pluralsight-FlightChecker.Models\Pluralsight-FlightChecker.Models.csproj" />
+  </ItemGroup>
+
 
 </Project>
